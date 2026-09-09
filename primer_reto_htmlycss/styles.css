@@ -1,0 +1,64 @@
+
+body{
+    font-family:Arial, Helvetica, sans-serif; 
+    background-color: firebrick;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  min-height: 100vh;
+  margin: 0;
+
+}
+.tarjeta {
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 12px;                  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    transition: box-shadow 0.5s ease
+}
+
+
+.tarjeta img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 8px;                 
+}
+
+
+.tarjeta table {
+    width: 100%;
+    margin: 15px 0;
+    border-collapse: collapse;
+}
+
+.tarjeta th, .tarjeta td {
+    padding: 6px;
+}
+
+
+.btn-comprar {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;                
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); 
+}
+
+.btn-comprar:hover {
+    background-color: #cc0000;
+}
+
+.tarjeta:hover{
+  box-shadow: 0 24px 34px rgba(0,0,0,0.12);
+    
+    transform: translateY(-6px);
+    
+}
