@@ -1,0 +1,187 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --card-bg: #ffffff;
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --accent-color: #6366f1;
+  --accent-hover: #4f46e5;
+  --highlight-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --shadow-normal: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-highlight: 0 20px 35px -5px rgba(99, 102, 241, 0.35), 0 10px 10px -5px rgba(99, 102, 241, 0.2);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.pricing-container, 
+.pricing-wrapper, 
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.card, 
+.plan-card, 
+.pricing-card {
+  background: var(--card-bg);
+  border-radius: 1.25rem;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: var(--shadow-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card.estandar,
+.plan-card.estandar,
+.card:nth-child(2) {
+  transform: scale(1.08);
+  border: 2px solid var(--accent-color);
+  box-shadow: var(--shadow-highlight);
+  z-index: 2;
+}
+
+.card.estandar:hover,
+.plan-card.estandar:hover,
+.card:nth-child(2):hover {
+  transform: scale(1.1) translateY(-6px);
+}
+
+.card.estandar::before,
+.plan-card.estandar::before,
+.card:nth-child(2)::before {
+  content: "★ Recomendado";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--highlight-gradient);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+h2, h3, .plan-title {
+  color: var(--text-main);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.price, .precio {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.price span, .precio span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+ul, .features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem 0;
+  flex-grow: 1;
+}
+
+li {
+  color: var(--text-muted);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+li::before {
+  content: "✓";
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-right: 0.75rem;
+}
+
+button, .btn, a.btn {
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 2px solid var(--accent-color);
+  background: transparent;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+button:hover, .btn:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+.card.estandar button,
+.plan-card.estandar .btn,
+.card:nth-child(2) button {
+  background: var(--highlight-gradient);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+
+.card.estandar button:hover,
+.plan-card.estandar .btn:hover,
+.card:nth-child(2) button:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+}
+
+@media (max-width: 768px) {
+  .card.estandar,
+  .plan-card.estandar,
+  .card:nth-child(2) {
+    transform: scale(1);
+    margin: 1rem 0;
+  }
+  
+  .card.estandar:hover,
+  .plan-card.estandar:hover,
+  .card:nth-child(2):hover {
+    transform: translateY(-5px);
+  }
+}
