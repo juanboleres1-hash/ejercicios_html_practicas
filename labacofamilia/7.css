@@ -1,0 +1,132 @@
+:root {
+  --text-color: #d2d2d2; 
+  --text-muted: #7a7a8c; 
+  --border-color: #d0d0da;      
+  --accent-color: #0029ff;      
+  --accent-glow: rgba(0, 41, 255, 0.4);
+}
+
+body{
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), 
+    url("seniors4.jpeg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  max-width: 400px;
+  margin: rem auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-weight: 550;
+}
+
+.form-group input {
+  padding: 0.6rem 3rem;
+  border-radius: 8px;
+  border: 3px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.75);
+ 
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.form-container button {
+  margin-top: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.page-wrapper {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-card {
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.form-container button {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 600;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #001fcc; 
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.form-container button:active {
+  transform: scale(0.97);
+}
+
+.btn-inicio {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(90deg, #e4550f 0%, #c30000 100%);
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-inicio:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
